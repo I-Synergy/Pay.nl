@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{B7D5970D-7D2C-443D-B849-745B92ACAED1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2BE758C5-5BDE-4D26-8607-2121C7F147AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayNLFormsApp", "samples\PAYNLFormsApp\PayNLFormsApp.csproj", "{6D6D7430-DF23-4A29-9C64-2EF056D99A4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48C4EFA3-42D1-44CF-A835-E02BB26F2700}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Analyzers.props = Analyzers.props
+		Analyzers.ruleset = Analyzers.ruleset
+		build.ps1 = build.ps1
+		LICENSE = LICENSE
+		NuGet.Config = NuGet.Config
+		Project.props = Project.props
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayNL", "src\PayNL\PayNL.csproj", "{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6EE72581-1F45-4450-8A4D-CD318C6D504B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{B03C10C7-98BD-4404-AA43-AB1D19076F49}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\Package.nuspec = nuget\Package.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D6D7430-DF23-4A29-9C64-2EF056D99A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6D7430-DF23-4A29-9C64-2EF056D99A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6D7430-DF23-4A29-9C64-2EF056D99A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6D7430-DF23-4A29-9C64-2EF056D99A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D6D7430-DF23-4A29-9C64-2EF056D99A4A} = {B7D5970D-7D2C-443D-B849-745B92ACAED1}
+		{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645} = {2BE758C5-5BDE-4D26-8607-2121C7F147AA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21A87E49-A7A0-4E06-A8F8-DB069EC38424}
+	EndGlobalSection
+EndGlobal
