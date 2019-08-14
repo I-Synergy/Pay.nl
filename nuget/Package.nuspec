@@ -12,6 +12,7 @@
     <copyright>Copyright 2019 © Pay.nl and International Intelligence</copyright>
     <tags>Pay.nl .net c# payment iDeal</tags>
     <projectUrl>https://github.com/I-Synergy/Pay.nl</projectUrl>
+    <repository type="git" url="https://github.com/I-Synergy/Pay.nl" />
     <license type="expression">MIT</license>
 
     <dependencies>

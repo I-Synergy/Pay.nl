@@ -1,5 +1,5 @@
-$framework_version = "2.0.1.0"
-$nuget_version = "2.0.1"
+$framework_version = "2.0.2.0"
+$nuget_version = "2.0.2"
 $msbuild = "${Env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild.exe"
 $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
 $targetNugetExe = "nuget.exe"
