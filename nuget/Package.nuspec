@@ -12,7 +12,7 @@
     <copyright>Copyright 2019 © Pay.nl and International Intelligence</copyright>
     <tags>Pay.nl .net c# payment iDeal</tags>
     <projectUrl>https://github.com/I-Synergy/Pay.nl</projectUrl>
-    <license type="expression">GPL-3.0-or-later</license>
+    <license type="expression">MIT</license>
 
     <dependencies>
       <dependency id="Microsoft.Extensions.Http" version="2.2.0" exclude="Build,Analyzers" />
