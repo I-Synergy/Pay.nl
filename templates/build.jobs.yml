@@ -5,11 +5,6 @@ jobs:
   displayName: 'Build Pay.nl libraries'
   container: msbuildcontainer
   steps:
-    - task: NuGetToolInstaller@1
-      displayName: 'Use NuGet 5.1.0'
-      inputs:
-        versionSpec: 5.1.0
-
     - task: DotNetCoreCLI@2
       displayName: 'Pay.nl - dotnet restore'
       inputs:
