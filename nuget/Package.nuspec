@@ -9,8 +9,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Pay.nl api library for .Net Standard 2.0</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2019 © Pay.nl and International Intelligence</copyright>
-    <tags>Pay.nl .net c# payment iDeal</tags>
+    <copyright>Copyright 2019</copyright>
+    <tags>Pay.nl .net c# payment iDeal PIN creditcard</tags>
     <projectUrl>https://github.com/I-Synergy/Pay.nl</projectUrl>
     <repository type="git" url="https://github.com/I-Synergy/Pay.nl" />
     <license type="expression">MIT</license>
@@ -22,8 +22,8 @@
   </metadata>
 
   <files>
-    <file src="..\output\PayNL\$BuildConfiguration$\netstandard2.0\PayNL.deps.json" target="lib\netstandard2.0" />
-    <file src="..\output\PayNL\$BuildConfiguration$\netstandard2.0\PayNL.dll" target="lib\netstandard2.0" />
-    <file src="..\output\PayNL\$BuildConfiguration$\netstandard2.0\PayNL.pdb" target="lib\netstandard2.0" />
+    <file src="$AssemblyFolder$\PayNL\$BuildConfiguration$\netstandard2.0\PayNL.deps.json" target="lib\netstandard2.0" />
+    <file src="$AssemblyFolder$\PayNL\$BuildConfiguration$\netstandard2.0\PayNL.dll" target="lib\netstandard2.0" />
+    <file src="$AssemblyFolder$\PayNL\$BuildConfiguration$\netstandard2.0\PayNL.pdb" target="lib\netstandard2.0" />
   </files>
 </package>
