@@ -15,7 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		Analyzers.props = Analyzers.props
 		Analyzers.ruleset = Analyzers.ruleset
-		build.ps1 = build.ps1
+		azure-pipelines.cd.yml = azure-pipelines.cd.yml
+		azure-pipelines.ci.yml = azure-pipelines.ci.yml
 		LICENSE = LICENSE
 		NuGet.Config = NuGet.Config
 		Project.props = Project.props
@@ -29,6 +30,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{B03C10C7-98BD-4404-AA43-AB1D19076F49}"
 	ProjectSection(SolutionItems) = preProject
 		nuget\Package.nuspec = nuget\Package.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{90A46D76-2CE9-4146-8D59-57006F58BF43}"
+	ProjectSection(SolutionItems) = preProject
+		build\build.ps1 = build\build.ps1
+		build\updatebuildnumber.ps1 = build\updatebuildnumber.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{304FE9E5-4600-44F9-8BE6-D039B8AFC858}"
+	ProjectSection(SolutionItems) = preProject
+		templates\artifacts.jobs.yml = templates\artifacts.jobs.yml
+		templates\build.jobs.yml = templates\build.jobs.yml
 	EndProjectSection
 EndProject
 Global
@@ -52,6 +65,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6D6D7430-DF23-4A29-9C64-2EF056D99A4A} = {B7D5970D-7D2C-443D-B849-745B92ACAED1}
 		{E0A6CBB9-EB3A-44C6-81AE-DA00F43B7645} = {2BE758C5-5BDE-4D26-8607-2121C7F147AA}
+		{304FE9E5-4600-44F9-8BE6-D039B8AFC858} = {48C4EFA3-42D1-44CF-A835-E02BB26F2700}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21A87E49-A7A0-4E06-A8F8-DB069EC38424}

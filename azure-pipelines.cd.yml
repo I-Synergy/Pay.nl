@@ -1,0 +1,26 @@
+name: $(Date:yyyy).1$(DayOfYear)$(Rev:.r).0
+
+trigger: none
+
+resources:
+  containers:
+    - container: msbuildcontainer
+      image: isynergyonline/buildtools:18362
+
+stages:
+  - stage: Build
+    displayName: 'Build'
+    jobs:
+    - template: templates/build.jobs.yml
+
+  - stage: Artifacts
+    displayName: 'Artifacts'
+    dependsOn: Build
+    condition: |
+      and
+      (
+        succeeded(), 
+        eq(variables['Build.SourceBranch'], 'refs/heads/master') 
+      )
+    jobs:
+    - template: templates/artifacts.jobs.yml

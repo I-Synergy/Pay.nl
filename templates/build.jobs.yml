@@ -1,0 +1,34 @@
+# File: pipelines/build.jobs.yml
+
+jobs:
+- job: BuildJob
+  displayName: 'Build Pay.nl libraries'
+  container: msbuildcontainer
+  steps:
+    - task: NuGetToolInstaller@1
+      displayName: 'Use NuGet 5.1.0'
+      inputs:
+        versionSpec: 5.1.0
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Pay.nl - dotnet restore'
+      inputs:
+        command: restore
+        projects: 'src\PayNL\PayNL.csproj'
+        feedsToUse: config
+        nugetConfigPath: nuget.config
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Pay.nl - dotnet build'
+      inputs:
+        command: build
+        projects: 'src\PayNL\PayNL.csproj'
+        arguments: '-c $(BuildConfiguration) -p:Version=$(build.buildNumber)'
+        feedsToUse: config
+        nugetConfigPath: nuget.config
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifacts'
+      inputs:
+        pathtoPublish: '$(System.DefaultWorkingDirectory)\Output'
+        artifactName: Output
