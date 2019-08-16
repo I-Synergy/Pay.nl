@@ -34,5 +34,5 @@ jobs:
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: Pay.nl'
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)\PayNL.$(build.buildNumber).nupkg'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)\Pay.nl.$(build.buildNumber).nupkg'
         artifactName: Upload
