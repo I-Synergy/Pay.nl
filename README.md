@@ -142,6 +142,19 @@ else
 }
 ```
 
+To get the details of a transaction, you can use:
+```c#
+var transaction = new PayNL.Transaction(SimpleIoc.Default.GetInstance<IClientService>());
+var response = await transaction.DetailsAsync("EX-code of transaction here");
+```
+
+To get the list of changes for transactions, you can use:
+```c#
+var transaction = new PayNL.Transaction(SimpleIoc.Default.GetInstance<IClientService>());
+var response = await transaction.ChangeStatusListAsync(unix-timestamp here);
+```
+
+
 When implementing the exchange script (where you should process the order in your backend):
 ```c#
 var transaction = new PayNL.Transaction(SimpleIoc.Default.GetInstance<IClientService>());
