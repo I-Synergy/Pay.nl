@@ -480,5 +480,96 @@ namespace PayNL
             await ClientService.PerformPostRequestAsync(request);
             return request.Response;
         }
+
+        /// <summary>
+        /// Get transaction details
+        /// </summary>
+        /// <param name="transactionId">The ID of the transaction (EX-code)</param>
+        /// <param name="entranceCode">The entrancecode of the transaction.</param>
+        /// <returns>Transaction details Request</returns>
+        public API.Transaction.Details.Request CreateTransactionDetailRequest(string transactionId, string entranceCode)
+        {
+            var request = new API.Transaction.Details.Request
+            {
+                TransactionId = transactionId,
+                EntranceCode = entranceCode
+            };
+            return request;
+        }
+
+        /// <summary>
+        /// Get transaction details
+        /// </summary>
+        /// <param name="transactionId">The ID of the transaction (EX-code)</param>
+        /// <returns>Transaction details Request</returns>
+        public API.Transaction.Details.Request CreateTransactionDetailRequest(string transactionId)
+        {
+            return CreateTransactionDetailRequest(transactionId, null);
+        }
+
+        /// <summary>
+        /// Performs a request to get transaction details.
+        /// </summary>
+        /// <returns>Full response object</returns>
+        public async Task<API.Transaction.Details.Response> DetailsAsync(API.Transaction.Details.Request request)
+        {
+            await ClientService.PerformPostRequestAsync(request);
+            return request.Response;
+        }
+
+        /// <summary>
+        /// Get transaction details
+        /// </summary>
+        /// <param name="transactionId">The ID of the transaction (EX-code)</param>
+        /// <param name="entranceCode">The entrancecode of the transaction.</param>
+        /// <returns>Transaction details Response</returns>
+        public Task<API.Transaction.Details.Response> DetailsAsync(string transactionId, string entranceCode)
+        {
+            return DetailsAsync(CreateTransactionDetailRequest(transactionId, entranceCode));
+        }
+
+        /// <summary>
+        /// Get transaction details
+        /// </summary>
+        /// <param name="transactionId">The ID of the transaction (EX-code)</param>
+        /// <returns>Transaction details Response</returns>
+        public Task<API.Transaction.Details.Response> DetailsAsync(string transactionId)
+        {
+            return DetailsAsync(CreateTransactionDetailRequest(transactionId));
+        }
+
+        /// <summary>
+        /// Get transaction ChangeStatusList
+        /// </summary>
+        /// <param name="timestamp">The Unix timestamp of where the list should begin.</param>
+        /// <returns>Transaction ChangeStatusList Request</returns>
+        public API.Transaction.ChangeStatusList.Request CreateTransactionChangeStatusListRequest(long timestamp)
+        {
+            var request = new API.Transaction.ChangeStatusList.Request
+            {
+                Timestamp = timestamp
+            };
+            return request;
+        }
+
+        /// <summary>
+        /// Performs a request to get transaction ChangeStatusList.
+        /// </summary>
+        /// <returns>Full response object</returns>
+        public async Task<API.Transaction.ChangeStatusList.Response> ChangeStatusListAsync(API.Transaction.ChangeStatusList.Request request)
+        {
+            await ClientService.PerformPostRequestAsync(request);
+            return request.Response;
+        }
+
+        /// <summary>
+        /// Get transaction ChangeStatusList
+        /// </summary>
+        /// <param name="timestamp">The Unix timestamp of where the list should begin.</param>
+        /// <returns>Transaction ChangeStatusList Response</returns>
+        public Task<API.Transaction.ChangeStatusList.Response> ChangeStatusListAsync(long timestamp)
+        {
+            return ChangeStatusListAsync(CreateTransactionChangeStatusListRequest(timestamp));
+        }
     }
 }
